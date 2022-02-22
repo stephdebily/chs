@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<h1>Nos produits</h1>
+	<div class="row">
+		{% for p in products %}
+			<div class="col-3">
+				{% include "product/_product_card.html.twig" with {'p': p} %}
+			</div>
+		{% endfor %}
+	</div>
+
+
+	<div class="row">
+		<div class="col">
+			<div class="card bg-primary text-white text-center">
+				<div class="card-body">
+					<i class="fas fa-truck fa-3x"></i>
+
+					<p class="card-text">Livraison express en 24h</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
